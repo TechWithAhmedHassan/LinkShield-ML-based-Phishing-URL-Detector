@@ -100,9 +100,10 @@ We built a **Streamlit-based app** where users can:
 ---
 
 ## 👨‍💻 Team Members
-- **Ahmed (Team Lead):** Pipeline architecture, supervised feature extraction, model dev.  
-- **Mohsin Aleem:** HTML parsing, Selenium checks, feature engineering.  
-- **Muhammad Ali Hassan:** Preprocessing, WHOIS integration, dataset validation, article writing.  
+- [**Ahmed (Team Lead)**](https://www.linkedin.com/in/ahmedhassan731/): Pipeline architecture, supervised feature extraction, model dev.  
+- [**Mohsin Aleem**](https://www.linkedin.com/in/m-mohsin-aleem-8a35a8267): HTML parsing, Selenium checks, feature engineering.  
+- [**Muhammad Ali Hassan**](https://www.linkedin.com/in/muhammad-ali-hassan-70a416310/): Preprocessing, WHOIS integration, dataset validation, article writing.  
+
 
 ---
 
