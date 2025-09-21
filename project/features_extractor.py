@@ -7,6 +7,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 
+
+
 def url_features(url: str):
     features = []
     # Setup Selenium headless browser
@@ -20,6 +22,7 @@ def url_features(url: str):
     except WebDriverException:
         driver = None
 
+
     # --- 21. RightClick (detect JS disable) ---
     try:
         if driver:
@@ -31,6 +34,7 @@ def url_features(url: str):
             features.append(1)
     except:
         features.append(1)
+
 
     # --- 22. popUpWindow ---
     try:
@@ -44,6 +48,8 @@ def url_features(url: str):
     except:
         features.append(1)
 
+
+
     # --- 23. Iframe ---
     try:
         if driver:
@@ -53,6 +59,8 @@ def url_features(url: str):
             features.append(1)
     except:
         features.append(1)
+
+
 
 
 
@@ -75,6 +83,10 @@ def url_features(url: str):
         print(f"WHOIS error for {url}: {e}")
         features.append(-1)
 
+
+
+
+
     # --- 25. DNS Record ---
     try:
         hostname = url.split("//")[-1].split("/")[0]
@@ -84,56 +96,8 @@ def url_features(url: str):
         features.append(-1)
 
 
-    # --- 26. Web Traffic (Placeholder: Alexa API needed) ---
-    # -1 = low, 0 = medium, 1 = high
-    try:
-        # Replace YOUR_API_KEY with your SimilarWeb API key
-        api_url = f"https://api.similarweb.com/v1/website/{url}/total-traffic-and-engagement/visits"
-        headers = {"Authorization": "Bearer YOUR_API_KEY"}
-        params = {"api_key": "YOUR_API_KEY"}
-        response = requests.get(api_url, headers=headers, params=params, timeout=5)
-        data = response.json()
 
-        # Example: get estimated monthly visits
-        visits = data.get("visits", None)
-
-        if visits is None:
-            features.append(-1)
-        elif visits >= 1000000:   # High traffic threshold
-            features.append(1)
-        elif visits >= 10000:     # Medium traffic threshold
-            features.append(0)
-        else:
-            features.append(-1)
-    except:
-        features.append(-1)
-
-
-    # # --- 27. Page Rank (Deprecated, Placeholder) ---
-    
-    # API_KEY = "Yss0wskwkk8kwokw84g808s4gsk8wc4o440sswww4"
-    # opr_url = "https://openpagerank.com/api/v1.0/getPageRank"
-
-    # params = {
-    #     "domains[]": "google.com"
-    # }
-    # headers = {
-    #     "API-OPR": API_KEY
-    # }
-
-    # response = requests.get(url, headers=headers, params=params)
-
-    # if response.status_code == 200:
-    #     data = response.json()
-    #     site = data["response"][0]
-    #     # Rule: 1 if rank > 0 else -1
-    #     output = 1 if site["page_rank_integer"] > 0 else -1
-    #     print(output)
-    # else:
-    #     print("Error:", response.status_code, response.text) 
-    
-
-    # --- 28. Google Index ---
+    # --- 26. Google Index ---
     try:
         query = f"https://www.google.com/search?q=site:{url}"
         r = requests.get(query, headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
@@ -144,11 +108,6 @@ def url_features(url: str):
     except:
         features.append(-1)
 
-    # --- 29. Links pointing to page (Placeholder: Majestic/Ahrefs API) ---
-    features.append(0)
-
-    # --- 30. Statistical report (Placeholder: Malicious dataset check) ---
-    features.append(-1)
 
     if driver:
         driver.quit()
