@@ -1,6 +1,6 @@
 # 🛡️ Phishing URL Detection Using Random Forest
 
-[![Medium Article](https://img.shields.io/badge/Read-Medium-green)](https://medium.com/@ah282672/phishing-detection-with-url-features-and-random-forest-50c2a8260de1)
+[![Medium Article](https://img.shields.io/badge/Read-Medium-green)](https://medium.com/@techwithahmedhassan/a-feature-based-approach-for-phishing-url-detection-using-random-forest-482cd5f605a1)
 
 ## 📌 Overview
 Phishing remains one of the most effective cyber-attacks because it preys on human trust.  
@@ -108,4 +108,4 @@ We built a **Streamlit-based app** where users can:
 
 ## 📖 Reference
 Full write-up available here:  
-👉 [Medium Blog](https://medium.com/@ah282672/phishing-detection-with-url-features-and-random-forest-50c2a8260de1)
+👉 [Medium Blog](https://medium.com/@techwithahmedhassan/a-feature-based-approach-for-phishing-url-detection-using-random-forest-482cd5f605a1)
