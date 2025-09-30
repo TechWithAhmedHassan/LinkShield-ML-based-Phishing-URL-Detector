@@ -3,7 +3,7 @@
 [![Medium Article](https://img.shields.io/badge/Read-Medium-green)](https://medium.com/@techwithahmedhassan/a-feature-based-approach-for-phishing-url-detection-using-random-forest-482cd5f605a1)
 
 ## 📌 Overview
-Phishing remains one of the most effective cyber-attacks because it preys on human trust. 
+Phishing remains one of the most effective cyber-attacks because it preys on human trust.  
 This project builds a **feature-based, interpretable phishing detection pipeline** that extracts **24 URL & page-level features**, trains a **Random Forest Classifier**, and evaluates it using standard metrics.
 
 Our pipeline prioritizes:
