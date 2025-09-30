@@ -8,7 +8,7 @@ import time
 # -------------------------------
 # Load trained model
 # -------------------------------
-rf_model = joblib.load("Model/rf_model.pkl")
+rf_model = joblib.load("./Model/rf_model.pkl")
 
 # -------------------------------
 # Streamlit UI

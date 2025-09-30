@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 # 2. Load dataset
 # Replace "phishing.csv" with your dataset file name
-df = pd.read_csv(r"./Dataset/dataset.csv")
+df = pd.read_csv(r"../Dataset/dataset.csv")
 print(df['Result'].value_counts())
 
 #3 Blance the dataset by removing some rows with Result == 1
